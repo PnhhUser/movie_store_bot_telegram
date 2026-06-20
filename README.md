@@ -15,6 +15,7 @@
 - `/help` - Show help
 - `/search <title>` - Search for movies
 - `/list` - List all movies
+- `/cancel` - Cancel adding movie
 
 ### Admin Commands
 

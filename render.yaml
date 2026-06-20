@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: movie-store-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: DB_TYPE
+        value: sqlite

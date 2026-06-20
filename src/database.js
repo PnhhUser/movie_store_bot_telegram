@@ -37,7 +37,7 @@ class MovieDB {
         message_id INTEGER NOT NULL,
         channel_id TEXT NOT NULL,
         added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        added_by INTEGER,
+        added_by BIGINT,
         description TEXT,
         genre TEXT,
         year INTEGER

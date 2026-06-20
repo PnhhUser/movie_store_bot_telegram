@@ -3,7 +3,8 @@ const MovieBot = require("./src/bot");
 
 // Tạo web server để Render giữ bot chạy
 const app = express();
-const PORT = process.env.PORT || 3000;
+// 1. Sửa sang 10000 cho đồng bộ với Render Free mặc định
+const PORT = process.env.PORT || 10000;
 
 // Khởi tạo bot
 const bot = new MovieBot();
@@ -18,8 +19,8 @@ app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
-// Start web server
-app.listen(PORT, () => {
+// 2. Thêm '0.0.0.0' vào đây để mở rộng cổng cho Render quét được
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`🌐 Web server is running on port ${PORT}`);
 });
 
